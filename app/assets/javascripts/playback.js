@@ -1,7 +1,4 @@
-
-/* Declare playback tokens */
-var playback_token = ""; // Add your playback token here
-var domain = "0.0.0.0";
+// tokens declared in separate file
 
 // a global variable that will hold a reference to the api swf once it has loaded
 var apiswf = null;
