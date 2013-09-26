@@ -997,7 +997,13 @@ $topbar-margin-bottom: emCalc(16px);
 		margin-bottom: emCalc(60px);
 	}
 	.top-bar .header-logo {
-		display: block;
+		display: inline-block;
+	}
+	.top-bar .foundicon-settings {
+		line-height: 40px; // reduced line-height to avoid background overflow
+		vertical-align: middle;
+		font-size: 16px;
+		margin-left: 3px;
 	}
 	.top-bar .header-logo-mobile {
 		display: none;

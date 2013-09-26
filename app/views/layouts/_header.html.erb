@@ -4,10 +4,10 @@
 						<!-- Title Area -->
 						<li class="name">
 							<h1>
-								<a href="#">
+								<%= link_to(root_url) do %>
 									<%= image_tag("prdio-logo.png", :height => '108', :width => '153', :class => "header-logo") %>
 									<%= image_tag("prdio-logo-mobile.png", :height => '51', :width => '75', :class => "header-logo-mobile") %>
-								</a>
+								<% end %>
 							</h1>
 						</li>
 						<!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
@@ -19,7 +19,7 @@
 						<ul class="left">
 							<li class="active"><a href="#">About</a></li>
 							<li><a href="#">How It Works</a></li>
-							<li><a href="#">Github</a></li>
+							<li><%= link_to 'Github', 'https://github.com/nelsonmc/prdio' %></li>
 						</ul>
 						<ul class="right">
 							<%= render "layouts/login_nav" %>

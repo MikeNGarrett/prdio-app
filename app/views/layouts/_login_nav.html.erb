@@ -1,10 +1,17 @@
 						<% if admin_signed_in? -%>
-							<li><%= link_to current_admin.email, admins_path %></li>
-							<li><%= link_to 'Admin section', admins_path %></li>
+							<li><%= link_to(edit_admin_registration_path) do %>
+								<%= current_admin.email %>
+								<i class="foundicon-settings"></i>
+								<% end %>
+							</li>
+							<li><%= link_to current_admin.email, admins_path %>Administration</li>
 							<li><%= link_to 'Sign out', destroy_admin_session_path, method: :delete %></li>
 						<% elsif user_signed_in? -%>
-							<li><%= link_to current_user.email, edit_user_registration_path %></li>
-							<li><%= link_to 'My info', edit_user_registration_path %></li>
+							<li><%= link_to(edit_user_registration_path) do %>
+								<%= current_user.email %>
+								<i class="foundicon-settings"></i>
+								<% end %>
+							</li>
 							<li><%= link_to 'Sign out', destroy_user_session_path, method: :delete %></li>				
 						<% else -%>
 							<li><%= link_to 'Login', new_user_session_path %></li>
