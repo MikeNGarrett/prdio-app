@@ -1,5 +1,4 @@
 						<% if admin_signed_in? -%>
-							<%= content_tag('li', :class=>cp(admins_path)){ link_to 'Administration', admins_path } %>
 							<%= content_tag('li', :class=>cp(edit_admin_registration_path)){ link_to(edit_admin_registration_path) do %>
 								<%= current_admin.email %>
 								<i class="foundicon-settings"></i>

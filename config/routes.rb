@@ -5,6 +5,7 @@ DeviseExample::Application.routes.draw do
   get '/token' => 'static#token', as: :token
   get '/features' => 'static#features', as: :features
   get '/how-it-works' => 'static#how_it_works', as: :how_it_works
+  get '/listen' => 'playback#index', as: :playback
 
   resources :static, only: :index
   resources :admins, only: :index
