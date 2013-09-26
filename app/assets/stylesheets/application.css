@@ -26,6 +26,10 @@ a {
   color: #0000FF;
 }
 
+#content {
+  padding: 10px;
+}
+
 .clear {
   clear: both;
   height: 0;

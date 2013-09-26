@@ -975,7 +975,7 @@ $topbar-media-query: "only screen and (min-width:"#{$topbar-breakpoint}")" !defa
 
 // Height and margin
 $topbar-height: 60px;
-$topbar-margin-bottom: emCalc(60px);
+$topbar-margin-bottom: emCalc(16px);
 
 // Topbar border bottom
 .top-bar {
@@ -993,6 +993,9 @@ $topbar-margin-bottom: emCalc(60px);
 }
 
 @media #{$topbar-media-query} {
+	body .top-bar {
+		margin-bottom: emCalc(60px);
+	}
 	.top-bar .header-logo {
 		display: block;
 	}
