@@ -1,13 +1,26 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html>
+<!DOCTYPE html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7 ]> <html class="ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
   <head>
-    <title><%= h(yield(:title) || "Devise") %></title>
-    <%= csrf_meta_tag %>
+    <meta charset="utf-8" />
+
+    <!-- Uncomment to make IE8 render like IE7 -->
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=7" /> -->
+
+    <!-- Set the viewport width to device width for mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title><%= content_for?(:title) ? yield(:title) : "Prdio" %></title>
+    <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    "application", media: "all" %>
     <%= javascript_include_tag :application %>
+    <%= javascript_include_tag "vendor/custom.modernizr" %>
     <%= yield(:head) %>
   </head>
+
   <body>
     <div id="container">
       <%- flash.each do |name, msg| -%>
@@ -38,5 +51,7 @@
 
       <%= yield %>
     </div>
+    <%= javascript_include_tag "application" %>
   </body>
 </html>
+
