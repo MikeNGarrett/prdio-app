@@ -1,19 +1,17 @@
 						<% if admin_signed_in? -%>
-							<li><%= link_to(edit_admin_registration_path) do %>
+							<%= content_tag('li', :class=>cp(admins_path)){ link_to 'Administration', admins_path } %>
+							<%= content_tag('li', :class=>cp(edit_admin_registration_path)){ link_to(edit_admin_registration_path) do %>
 								<%= current_admin.email %>
 								<i class="foundicon-settings"></i>
-								<% end %>
-							</li>
-							<li><%= link_to current_admin.email, admins_path %>Administration</li>
-							<li><%= link_to 'Sign out', destroy_admin_session_path, method: :delete %></li>
+							<% end } %>
+							<%= content_tag('li', :class=>cp(destroy_admin_session_path)){ link_to 'Sign out', destroy_admin_session_path, method: :delete } %>
 						<% elsif user_signed_in? -%>
-							<li><%= link_to(edit_user_registration_path) do %>
+							<%= content_tag('li', :class=>cp(edit_user_registration_path)){ link_to(edit_user_registration_path) do %>
 								<%= current_user.email %>
 								<i class="foundicon-settings"></i>
-								<% end %>
-							</li>
-							<li><%= link_to 'Sign out', destroy_user_session_path, method: :delete %></li>				
+							<% end } %>
+							<%= content_tag('li', :class=>cp(destroy_user_session_path)){ link_to 'Sign out', destroy_user_session_path, method: :delete } %>			
 						<% else -%>
-							<li><%= link_to 'Login', new_user_session_path %></li>
-  						<li><%= link_to 'Sign up', new_user_registration_path %></li>
+							<%= content_tag('li', :class=>cp(new_user_session_path)){ link_to 'Login', new_user_session_path } %>
+							<%= content_tag('li', :class=>cp(new_user_registration_path)){ link_to 'Sign up', new_user_registration_path } %>
 						<% end -%>

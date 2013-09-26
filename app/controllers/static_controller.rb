@@ -4,4 +4,10 @@ class StaticController < ApplicationController
   def token
   end
 
+  def features
+  end
+
+  def how_it_works
+  end
+
 end

@@ -17,9 +17,9 @@
 					<section class="top-bar-section">
 						<!-- Left Nav Section -->
 						<ul class="left">
-							<li class="active"><a href="#">About</a></li>
-							<li><a href="#">How It Works</a></li>
-							<li><%= link_to 'Github', 'https://github.com/nelsonmc/prdio' %></li>
+							<%= content_tag('li', :class=>cp(features_url)){ link_to('Features', features_url) } %>
+							<%= content_tag('li', :class=>cp(how_it_works_url)){ link_to('How it works', how_it_works_url) } %>
+							<%= content_tag('li'){ link_to 'Github', 'https://github.com/nelsonmc/prdio' } %>
 						</ul>
 						<ul class="right">
 							<%= render "layouts/login_nav" %>
