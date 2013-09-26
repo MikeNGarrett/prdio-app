@@ -1,4 +1,4 @@
-class HomeController < ApplicationController
+class StaticController < ApplicationController
   before_action :authenticate_user!, only: :token
 
   def token

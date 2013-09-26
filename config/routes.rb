@@ -2,11 +2,11 @@ DeviseExample::Application.routes.draw do
 
   devise_for :users, :admins
 
-  get '/token' => 'home#token', as: :token
+  get '/token' => 'static#token', as: :token
 
-  resources :home, only: :index
+  resources :static, only: :index
   resources :admins, only: :index
 
-  root 'home#index'
+  root 'static#index'
 
 end
