@@ -15,3 +15,9 @@
 	-webkit-transform: perspective(750px) rotateY(15deg);
 }
 
+.playback-current {
+	opacity: 0.05; // Allow playback to fade in once songs begin playing
+	-khtml-opacity: 0.05;
+	-moz-opacity: 0.05;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=5)";
+}
