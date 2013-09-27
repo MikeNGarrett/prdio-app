@@ -1,29 +1,29 @@
 <div class="row playback-current row-margin-medium">
 	<div id="apiswf"></div>
-	<div class="large-4 large-offset-2 columns">
-		<div class="show-for-medium-up album">
-			<img src="<%= image_url 'album-placeholder.jpg' %>" id="art">
-		</div>
+	<div class="columns large-8 large-centered small-12 small-centered">
+		<ul class="large-block-grid-2 small-block-grid-2">
+			<li class="small-4 large-6">
+				<div class="album">
+					<img src="<%= image_url 'album-placeholder.jpg' %>" id="art">
+				</div>
+			</li>
+			<li class="small-8 large-6">
+				<h3 id="track">Track</h3>
+				<h5 id="artist">Artist</h5>
+				<h6 id="album">Album</h6>
+				<dl style="display: none;">
+				  <dt>playState</dt>
+				  <dd id="playState"></dd>
+				  <dt>Position</dt>
+				  <dd id="position"></dd>
+				</dl>
+			</li>
+		</ul>
 	</div>
-	<div class="large-4 columns">
-		<dl>
-		  <dt>playState</dt>
-		  <dd id="playState"></dd>
-		  <dt>Track</dt>
-		  <dd id="track"></dd>
-		  <dt>Album</dt>
-		  <dd id="album"></dd>
-		  <dt>Artist</dt>
-		  <dd id="artist"></dd>
-		  <dt>Position</dt>
-		  <dd id="position"></dd>
-		</dl>
-	</div>
-	<div class="clear"></div>
 </div><!-- /.playback-current -->
 
 <div class="row playback-controls row-margin-medium">
-	<input id="play_key" value="a997982"><button id="play">Play</button><br>
+	<input id="play_key" value="a997982"><button id="play">Play</button>
 	<button id="stop">Stop</button>
 	<button id="pause">Pause</button>
 	<button id="previous">Previous</button>
