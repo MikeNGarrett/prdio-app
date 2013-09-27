@@ -1,0 +1,23 @@
+$fontFileName: "/assets/ll_record/ll_record-webfont";
+
+@font-face {
+	font-family: 'll_recordregular';
+	src: url('#{$fontFileName}.eot');
+	src: url('#{$fontFileName}.eot?#iefix') format('embedded-opentype'),
+		 url('#{$fontFileName}.woff') format('woff'),
+		 url('#{$fontFileName}.ttf') format('truetype'),
+		 url('#{$fontFileName}.svg#ll_recordregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.ll_record {
+	font-family: 'll_recordregular';
+	font-size: 60px;
+	cursor: pointer;
+	color: #005b87;
+
+	&:hover {
+		color: #008fd5;
+	}
+}
