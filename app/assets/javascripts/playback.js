@@ -17,7 +17,7 @@ $.fn.squarify = function(selector) {
 $(document).ready(function() {
 
   $(window).squarify('.album');
-  
+
   // on page load use SWFObject to load the API swf into div#apiswf
   var flashvars = {
     'playbackToken': playback_token, // from token.js
@@ -88,7 +88,11 @@ callback_object.playingTrackChanged = function playingTrackChanged(playingTrack,
   // The currently playing track has changed.
   // Track metadata is provided as playingTrack and the position within the playing source as sourcePosition.
   if (playingTrack != null) {
-  	$('.playback-current').animate({opacity: 1},500);
+
+  	// Remove loading message, display current track content
+	$('.playback-current .loading').fadeOut('slow');
+	$('.playback-current .playback-current-content').animate({opacity: 1},1000);
+
     $('#track').text(playingTrack['name']);
     $('#album').text(playingTrack['album']);
     $('#artist').text(playingTrack['artist']);

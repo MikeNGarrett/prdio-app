@@ -11,13 +11,28 @@
   display: none;
 }
 
-.album {
-	-webkit-transform: perspective(750px) rotateY(15deg);
-}
-
 .playback-current {
-	opacity: 0.05; // Allow playback to fade in once songs begin playing
-	-khtml-opacity: 0.05;
-	-moz-opacity: 0.05;
-	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=5)";
+	position: relative;
+
+	.playback-current-content {
+		opacity: 0.05; // Allow playback to fade in once songs begin playing
+		-khtml-opacity: 0.05;
+		-moz-opacity: 0.05;
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=5)";
+
+		.album {
+			-webkit-transform: perspective(750px) rotateY(15deg);
+		}
+	}
+
+	.loading {
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		top: 0;
+
+		h1, h2, h3, h4, h5, h6 {
+			margin-top: 3em;
+		}
+	}
 }
