@@ -1,10 +1,12 @@
-# Devise Example for Rails 4.0.0
+# Prdio
 
-Example App using devise. http://github.com/plataformatec/devise
+Rdio, reimagined for parties. https://github.com/nelsonmc/prdio
+
+Built using Devise starter app (http://github.com/plataformatec/devise) and Hello World for Rdio Playback API (https://github.com/rdio/hello-web-playback/)
 
 ## Installation
 
-Install bundler if you haven't yet:
+Install bundler:
 
 ```
 gem install bundler
@@ -33,6 +35,11 @@ This will:
 
 Run the server and use the credentials provided by the rake task to sign in and test the application.
 
-## License
+To allow Rdio playback, you must also add a valid token for your local domain. This can be retrieved here: (http://rdioconsole.appspot.com/#method=getPlaybackToken). Once you have generated a key, it can be added as such:
 
-MIT License. Copyright 2010-2013 Plataforma Tecnologia. http://blog.plataformatec.com.br
+```
+# app/assets/javascripts/token.js
+
+var playback_token = "your_playback_token_here";
+var domain = "0.0.0.0";
+```
