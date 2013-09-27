@@ -147,7 +147,7 @@ callback_object.updateFrequencyData = function updateFrequencyData(arrayAsString
   var arr = arrayAsString.split(',');
 
   $('#freq div').each(function(i) {
-    $(this).width(parseInt(parseFloat(arr[i])*500));
+    $(this).width(parseInt(parseFloat(arr[i])*100)+'%');
   })
 }
 

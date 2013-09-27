@@ -2,9 +2,13 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-#freq div {
-  height: 10px;
-  background-color: red;
+#freq {
+	width: 50%;
+	
+	div {
+	  height: 10px;
+	  background-color: #008fd5;
+	}
 }
 
 #upsell div {
