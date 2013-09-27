@@ -13,7 +13,7 @@ Rdio is pretty much amazing - you can define playlists, custom radio stations, a
 
 ## Screenshots
 
-[Screenshot](screenshot-1.png)
+![Screenshot](screenshot-1.png)
 
 ## Installation
 
