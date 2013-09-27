@@ -11,6 +11,10 @@ Rdio is pretty much amazing - you can define playlists, custom radio stations, a
 * Easy access to the most popular songs. No more "experimenting" with B-sides in Rdio Stations: just the good stuff.
 * A highly-simplified interface. People want to be able to add songs to the playlist, but shouldn't be burdened by a cumbersome interface. We're here to party, after all.
 
+## Screenshots
+
+[Screenshot](screenshot-1.png)
+
 ## Installation
 
 Install bundler:
