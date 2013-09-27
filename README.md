@@ -1,6 +1,6 @@
 # Prdio
 
-Rdio, reimagined for parties. https://github.com/nelsonmc/prdio
+Rdio, reimagined for parties. https://github.com/nelsonmc/prdio-app
 
 Built using Devise starter app (http://github.com/plataformatec/devise) and Hello World for Rdio Playback API (https://github.com/rdio/hello-web-playback/)
 
