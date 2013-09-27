@@ -14,6 +14,10 @@
 .playback-current {
 	position: relative;
 
+	#apiswf {
+		height: 1px;
+	}
+
 	.playback-current-content {
 		opacity: 0.05; // Allow playback to fade in once songs begin playing
 		-khtml-opacity: 0.05;

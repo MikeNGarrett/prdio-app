@@ -72,6 +72,8 @@ callback_object.ready = function ready(user) {
   }
 
   console.log(user);
+
+  apiswf.rdio_play($('#play_key').val()); // automatically start playing
 }
 
 callback_object.freeRemainingChanged = function freeRemainingChanged(remaining) {
@@ -96,7 +98,7 @@ callback_object.playingTrackChanged = function playingTrackChanged(playingTrack,
     $('#track').text(playingTrack['name']);
     $('#album').text(playingTrack['album']);
     $('#artist').text(playingTrack['artist']);
-    $('#art').attr('src', playingTrack['icon']);
+    $('#art').attr('src', playingTrack['bigIcon']);
   }
 }
 
