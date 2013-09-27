@@ -1,43 +1,53 @@
-<h1>Rdio Playback API simple example</h1>
-<div id="apiswf"></div>
-<dl>
-  <dt>playState</dt>
-  <dd id="playState"></dd>
+<div class="row playback-current row-margin-medium">
+	<div id="apiswf"></div>
+	<div class="large-4 large-offset-2 columns">
+		<div class="show-for-medium-up album">
+			<img src="<%= image_url 'album-placeholder.jpg' %>" id="art">
+		</div>
+	</div>
+	<div class="large-4 columns">
+		<dl>
+		  <dt>playState</dt>
+		  <dd id="playState"></dd>
+		  <dt>Track</dt>
+		  <dd id="track"></dd>
+		  <dt>Album</dt>
+		  <dd id="album"></dd>
+		  <dt>Artist</dt>
+		  <dd id="artist"></dd>
+		  <dt>Position</dt>
+		  <dd id="position"></dd>
+		</dl>
+	</div>
+	<div class="clear"></div>
+</div><!-- /.playback-current -->
 
-  <dt>track</dt>
-  <dd id="track"></dd>
-  <dt>album</dt>
-  <dd id="album"></dd>
-  <dt>artist</dt>
-  <dd id="artist"></dd>
-  <dt>art</dt>
-  <dd><img src="" id="art"></dd>
-  <dt>position</dt>
-  <dd id="position"></dd>
-</dl>
+<div class="row playback-controls row-margin-medium">
+	<input id="play_key" value="a997982"><button id="play">Play</button><br>
+	<button id="stop">Stop</button>
+	<button id="pause">Pause</button>
+	<button id="previous">Previous</button>
+	<button id="next">Next</button>
+</div><!-- /.playback-controls -->
 
-<input id="play_key" value="a997982"><button id="play">Play</button><br>
-<button id="stop">Stop</button>
-<button id="pause">Pause</button>
-<button id="previous">Previous</button>
-<button id="next">Next</button>
+<div class="row">
+	<div id="freq">
+	  <div></div>
+	  <div></div>
+	  <div></div>
+	  <div></div>
+	  <div></div>
+	  <div></div>
+	  <div></div>
+	  <div></div>
+	  <div></div>
+	  <div></div>
+	</div>
 
-<div id="freq">
-  <div></div>
-  <div></div>
-  <div></div>
-  <div></div>
-  <div></div>
-  <div></div>
-  <div></div>
-  <div></div>
-  <div></div>
-  <div></div>
-</div>
-
-<div id="upsell">
-  <div id="subscriber">You are an Rdio subscriber. You're awesome.</div>
-  <div id="trial">You are an Rdio trial user, Subscribe now!</div>
-  <div id="free">You are an Rdio Free user with <span id="remaining"></span>% of your quota remaining, subscribe now!</div>
-  <div id="nobody">To hear full tracks subscribe to Rdio.</div>
+	<div id="upsell">
+	  <div id="subscriber">You are an Rdio subscriber. You're awesome.</div>
+	  <div id="trial">You are an Rdio trial user, Subscribe now!</div>
+	  <div id="free">You are an Rdio Free user with <span id="remaining"></span>% of your quota remaining, subscribe now!</div>
+	  <div id="nobody">To hear full tracks subscribe to Rdio.</div>
+	</div>
 </div>

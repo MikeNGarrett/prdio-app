@@ -66,6 +66,20 @@ $secondary-color: #005b87;
 // Grid Variables
 //
 
+// Additional row classes to add margins
+
+.row.row-margin-large {
+	margin-bottom: 3em;
+}
+
+.row.row-margin-medium {
+	margin-bottom: 2em;
+}
+
+.row.row-margin-small {
+	margin-bottom: 1em;
+}
+
 // $row-width: 62.5em;
 // $column-gutter: 1.875em;
 // $total-columns: 12;

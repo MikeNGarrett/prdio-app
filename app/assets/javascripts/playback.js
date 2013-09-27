@@ -3,7 +3,21 @@
 // a global variable that will hold a reference to the api swf once it has loaded
 var apiswf = null;
 
+$.fn.squarify = function(selector) {
+	$(selector).each(function() {
+		$(this).css('height',$(this).css('width'));
+	});
+	$(this).resize(function() {
+		$(selector).each(function() {
+			$(this).css('height',$(this).css('width'));
+		});
+	});
+};
+
 $(document).ready(function() {
+
+  $(window).squarify('.album');
+  
   // on page load use SWFObject to load the API swf into div#apiswf
   var flashvars = {
     'playbackToken': playback_token, // from token.js
